@@ -1,0 +1,85 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="
+    value=rock;
+    console.log(value);
+    const randomNum=Math.random();
+    console.log(randomNum)
+    if (randomNum <=(1/3)) {
+        compValue=rock;
+    } else if (randomNum>1/3 && randomNum <2/3) {
+        compValue=paper;
+    } else if(randomNum<1){
+        compValue=scissor;
+    }
+    console.log(compValue);
+    if(value===compValue){
+        alert(`You picked ${value}. Computer picked ${compValue}. Match Draw`);
+    } else if (compValue===paper) {
+        alert(`You picked ${value}. Computer picked ${compValue}. Computer Won the Match`);
+    } else if (compValue===scissor){
+        alert(`You picked ${value}. Computer picked ${compValue}. Person won the Match`);
+    }
+    
+    ">Rock</button>
+    <button onclick="
+    value=paper;
+    console.log(value);
+    const randomNum=Math.random();
+    console.log(randomNum)
+    if (randomNum <=(1/3)) {
+        compValue=rock;
+    } else if (randomNum>1/3 && randomNum <2/3) {
+        compValue=paper;
+    } else if(randomNum<1){
+        compValue=scissor;
+    }
+    console.log(compValue);
+    if(value===compValue){
+        alert(`You picked ${value}. Computer picked ${compValue}. Match Draw`);
+    } else if (compValue===scissor) {
+        alert(`You picked ${value}. Computer picked ${compValue}. Computer Won the Match`);
+    } else if (compValue===rock){
+        alert(`You picked ${value}. Computer picked ${compValue}. Person won the Match`);
+    }
+    ">Paper</button>
+    <button onclick="
+    value=scissor
+    console.log(value)
+    console.log(value);
+    const randomNum=Math.random();
+    console.log(randomNum)
+    if (randomNum <=(1/3)) {
+        compValue=rock;
+    } else if (randomNum>1/3 && randomNum <2/3) {
+        compValue=paper;
+    } else if(randomNum<1){
+        compValue=scissor;
+    }
+    console.log(compValue);
+    if(value===compValue){
+        alert(`You picked ${value}. Computer picked ${compValue}. Match Draw`);
+    } else if (compValue===rock) {
+        alert(`You picked ${value}. Computer picked ${compValue}. Computer Won the Match`);
+    } else if (compValue===paper){
+        alert(`You picked ${value}. Computer picked ${compValue}. Person won the Match`);
+    }
+    ">Scissor</button>
+    <script>
+        const rock = 'Rock';
+        const paper = 'Paper';
+        const scissor = 'Scissor';
+        let value;
+        let compValue;
+    </script>
+</body>
+
+</html>

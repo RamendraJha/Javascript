@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button onclick="
+computerMove(rock)
+">Rock</button>
+    <button onclick="
+computerMove(paper)
+">Paper</button>
+    <button onclick="
+computerMove(scissor)
+">Scissor</button>
+
+    <script>
+
+        function computerMove(personMove) {
+            let compValue;
+            const randomNum = Math.random();
+            console.log(randomNum);
+            if (randomNum <= (1 / 3)) {
+                compValue = rock;
+            } else if (randomNum > 1 / 3 && randomNum < 2 / 3) {
+                compValue = paper;
+            } else if (randomNum < 1) {
+                compValue = scissor;
+            }
+            if (personMove === compValue) {
+                alert(`You picked ${personMove}. Computer picked ${compValue}. Match Draw`);
+            }
+            if (personMove === paper) {
+                if (compValue === scissor) {
+                    alert(`You picked ${personMove}. Computer picked ${compValue}. Computer Won the Match`);
+                } else if (compValue === rock) {
+                    alert(`You picked ${personMove}. Computer picked ${compValue}. You won the Match`);
+                }
+            } else if (personMove === rock) {
+                if (compValue === paper) {
+                    alert(`You picked ${personMove}. Computer picked ${compValue}. Computer Won the Match`);
+                } else if (compValue === scissor) {
+                    alert(`You picked ${personMove}. Computer picked ${compValue}. You won the Match`);
+                }
+            } else if (personMove === scissor) {
+                if (compValue === rock) {
+                    alert(`You picked ${personMove}. Computer picked ${compValue}. Computer Won the Match`);
+                } else if (compValue === paper) {
+                    alert(`You picked ${personMove}. Computer picked ${compValue}. You won the Match`);
+                }
+            }
+        }
+        const rock = 'Rock';
+        const paper = 'Paper';
+        const scissor = 'Scissor';
+        let value;
+        let compValue;
+    </script>
+</body>
+
+</html>
